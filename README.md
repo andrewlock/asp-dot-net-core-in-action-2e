@@ -52,3 +52,11 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 * *TagHelpers* - Demonstrates the input types generated for various property types and `DataAnnotations`, as described table 8.1.
 * *SelectLists* - Generating a variety of select lists, as shown in section 8.2.4
 * *EnvironmentTag* - Using the environment tag to conditionally render content, as shown in section 8.5
+
+## [Chapter 9](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter09)
+* *BlazorWebAssemblyProject* - A basic Blazor WebAssembly web application, as shown in Figure 9.1, created using the Blazor WebAssembly template. Follow the instructions at https://docs.microsoft.com/en-gb/aspnet/core/blazor/get-started to try it for yourself.
+* *DefaultWebApiProject* - The default Web API project, created using the Visual Studio API template, as in section 9.2.
+* *BasicWebApiProject* - A basic Web API project, returning a list of fruit, as demonstrated in section 9.2.
+* *UsingApiControllerAttribute* - A project containing 2 controllers, demonstrating the additional code required if you don't use the `[ApiController]` attribute, as in section 9.5.
+* *ProblemDetailsExample* - A simple API controller that demonstrates automatically returning a `ValidationProblemDetails` object when the binding model (the `myValue` route parameter) is empty.
+* *CarsWebApi* - A Web API controller that demonstrates generating various different response types. Is configured to allow XML output in Startup.cs Use https://www.getpostman.com to make requests to the API. Also configured to use the _Newtonsoft.Json_ formatter instead of the _System.Text.Json_ formatter.
