@@ -1,0 +1,52 @@
+﻿@page "{handler?}/{id?}"
+@model IndexModel
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1>Click Submit to send the model</h1>
+<form asp-page-handler="EditProduct">
+    <div class="form-group">
+        <label asp-for="Product.Id"></label>
+        <input class="form-control" asp-for="Product.Id" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Name"></label>
+        <input class="form-control" asp-for="Product.Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.SellPrice"></label>
+        <input class="form-control" asp-for="Product.SellPrice" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h1>Click Submit to send a form with two models</h1>
+<p>Binding to multiple arguments is rare, so you need to do more work to bind the model correctly, and can't just use the tag helpers</p>
+<form asp-page-handler="EditTwoProducts">
+    <div class="form-group">
+        <label>Product 1 Id</label>
+        <input class="form-control" name="product1.@nameof(Model.Product.Id)" />
+    </div>
+    <div class="form-group">
+        <label>Product 1 Name</label>
+        <input class="form-control" name="product1.@nameof(Model.Product.Name)" />
+    </div>
+    <div class="form-group">
+        <label>Product 1 SellPrice</label>
+        <input class="form-control" name="product1.@nameof(Model.Product.SellPrice)" />
+    </div>
+    <div class="form-group">
+        <label>Product 2 Id</label>
+        <input class="form-control" name="product2.@nameof(Model.Product.Id)" />
+    </div>
+    <div class="form-group">
+        <label>Product 2 Name</label>
+        <input class="form-control" name="product2.@nameof(Model.Product.Name)" />
+    </div>
+    <div class="form-group">
+        <label>Product 2 SellPrice</label>
+        <input class="form-control" name="product2.@nameof(Model.Product.SellPrice)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

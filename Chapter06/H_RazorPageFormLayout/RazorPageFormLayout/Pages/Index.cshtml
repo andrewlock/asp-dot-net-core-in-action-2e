@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<ul>
+    @foreach (var (key, product) in Model.Products)
+    {
+        <li><a asp-page="EditProduct" asp-route-id="@key" >@product.ProductName (price: @product.SellPrice, qty: @product.QuantityInStock)</a></li>
+    }
+</ul>

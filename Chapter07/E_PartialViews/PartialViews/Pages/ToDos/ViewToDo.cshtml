@@ -1,0 +1,16 @@
+﻿@page "{id}"
+@model ViewToDoModel
+@{
+    ViewData["Title"] = "View To-Do";
+}
+
+<p>
+    @if (Model.Item.IsComplete)
+    {
+        <strong>This task is complete!</strong>
+    }
+    else
+    {
+        <partial name="_ToDo" model="Model.Item" />
+    }
+</p>

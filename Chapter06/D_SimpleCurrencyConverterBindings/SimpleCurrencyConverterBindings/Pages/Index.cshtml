@@ -1,0 +1,67 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Success";
+    string url;
+}
+<h1>Click submit to make a request, and see the results</h1>
+
+@{
+    url = "/GBP/USD";
+}
+<form action="@url" asp-antiforgery="true" method="post">
+    <p>@url</p>
+    <p>Form Values: none</p>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr />
+
+@{
+    url = "/GBP/USD?currencyIn=CAD";
+}
+<form action="@url" method="post" asp-antiforgery="true">
+    <p>@url</p>
+    <p>Form Values:</p>
+    <div class="form-group">
+        <label for="QTY" class="label">QTY</label>
+        <input type="text" name="QTY" value="50" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr />
+
+@{
+    url = "/GBP/USD?qty=100";
+}
+<form action="@url" method="post" asp-antiforgery="true">
+    <p>@url</p>
+    <p>Form Values:</p>
+    <div class="form-group">
+        <label for="QTY" class="label">QTY</label>
+        <input type="text" name="QTY" value="50" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr />
+
+@{
+    url = "/GBP/USD?qty=100";
+}
+<form action="@url" method="post" asp-antiforgery="true">
+    <p>@url</p>
+    <p>Form Values:</p>
+    <div class="form-group">
+        <label for="currencyIn" class="label">currencyIn</label>
+        <input type="text" name="currencyIn" value="CAD" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="currencyOut" class="label">currencyOut</label>
+        <input type="text" name="currencyOut" value="EUR" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="qty" class="label">qty</label>
+        <input type="text" name="qty" value="50" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

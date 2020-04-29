@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<h2>Pick your favourite language!</h2>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Standard dropdown</label>
+                <select class="form-control dropdown" asp-for="Input.SelectedValue1" asp-items="Model.Items">
+                    <option value="">**Not selected**</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Single item list box</label>
+                <select class="form-control" asp-for="Input.SelectedValue2" asp-items="Model.Items" size="@Model.Items.Count()"></select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Multi item list box</label>
+                <select class="form-control" asp-for="Input.MultiValues1" asp-items="Model.Items" style="height:120px"></select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>List box with Groups </label>
+                <select class="form-control" asp-for="Input.MultiValues2" asp-items="Model.ItemsWithGroups" style="height:160px"></select>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h2>Pick your favourite language!</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Without "No Selection" Option</label>
+            <select class="form-control dropdown" asp-for="Input.SelectedValue1" asp-items="Model.Items">
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>With "No Selection" Option</label>
+            <select class="form-control dropdown" asp-for="Input.SelectedValue1" asp-items="Model.Items">
+                <option value="">**Not selected**</option>
+            </select>
+        </div>
+    </div>
+</div>

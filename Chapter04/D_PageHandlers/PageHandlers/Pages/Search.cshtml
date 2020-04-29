@@ -1,0 +1,35 @@
+﻿@page
+@model PageHandlers.SearchModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    <p>Enter a Search Term (e.g. "i"):</p>
+
+    <form method="post">
+        Search term:
+        <input asp-for="Input.SearchTerm" />
+        <input type="submit" />
+    </form>
+
+    @if (Model.Results != null)
+    {
+        Results:
+        <ul>
+            @foreach (var product in Model.Results)
+            {
+                <li>@product.Name</li>
+            }
+        </ul>
+    }
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@page
+@model RoutingExample.Pages.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<form method="post">
+    <label asp-for="SearchTerm"></label>
+    <input asp-for="SearchTerm" />
+    <span asp-validation-for="SearchTerm"></span>
+
+    <button asp-page-handler="" type="submit">Search</button>
+    <button asp-page-handler="IgnoreCase" type="submit">Search (ignore case)</button>
+</form>
+
+@if (Model.Results != null)
+{
+    if (Model.Results.Any())
+    {
+        <ul>
+            @foreach (var product in Model.Results)
+            {
+                <li>@product.Name (@product.Price.ToString("c"))</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No results found for @Model.SearchTerm!</p>
+    }
+}
+
+
+

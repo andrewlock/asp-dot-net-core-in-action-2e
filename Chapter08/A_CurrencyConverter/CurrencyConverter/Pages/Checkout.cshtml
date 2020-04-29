@@ -1,0 +1,34 @@
+﻿@page
+@model CurrencyConverter.Pages.CheckoutModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Input.FirstName"></label>
+        <input class="form-control" asp-for="Input.FirstName" />
+        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.LastName"></label>
+        <input class="form-control" asp-for="Input.LastName" />
+        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.Email"></label>
+        <input class="form-control" asp-for="Input.Email" />
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.PhoneNumber"></label>
+        <input class="form-control" asp-for="Input.PhoneNumber" />
+        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

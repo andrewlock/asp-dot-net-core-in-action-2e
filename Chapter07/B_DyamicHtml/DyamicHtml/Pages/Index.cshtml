@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+    var numberOfListItems = new Random().Next(1, 10);
+    bool displayLinks = (numberOfListItems % 2) == 0;
+    ViewData["ShowLinks"] = displayLinks;
+}
+
+<h4>Number of items: @numberOfListItems</h4>
+<div class="row">
+    <div class="col-md-12">
+        <ul>
+            @for (int i = 0; i < numberOfListItems; i++)
+            {
+                <li>
+                    <span>List item No. @i</span> <button class="btn btn-primary">View</button>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

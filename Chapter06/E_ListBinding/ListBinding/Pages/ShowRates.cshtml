@@ -1,0 +1,14 @@
+﻿@page
+@model ListBinding.Pages.ShowRatesModel
+@{
+    ViewData["Title"] = "The rates";
+}
+<h1>Exchange rates</h1>
+
+<dl class="dl-horizontal">
+    @foreach (var item in Model.SelectedCurrencies)
+    {
+        <dt>@item.Key</dt>
+        <dd>@item.Value</dd>
+    }
+</dl>

@@ -1,0 +1,19 @@
+﻿@page "{id}"
+@model ToDoList.Pages.ViewToDoModel
+
+<p>
+    @if (Model.ToDo.IsComplete)
+    {
+        <strong>Well done, you’re all done!</strong>
+    }
+    else
+    {
+        <strong>The following tasks remain:</strong>
+        <ul>
+            @foreach (var task in Model.ToDo.Tasks)
+            {
+                <li>@task</li>
+            }
+        </ul>
+    }
+</p>

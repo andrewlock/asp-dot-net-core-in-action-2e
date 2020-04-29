@@ -1,0 +1,10 @@
+﻿@model ToDoItemViewModel
+
+<h2>@Model.Title</h2>
+<ul>
+    @foreach (var task in Model.Tasks)
+    {
+    <li>@task</li>
+
+    }
+</ul>

@@ -1,0 +1,17 @@
+﻿@page
+@model RecentToDosModel
+@{
+    ViewData["Title"] = "Recent To-Dos";
+}
+
+<h2>Most recent @Model.RecentToDosToDisplay Tasks: </h2>
+
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var item in Model.RecentToDos)
+        {
+            <partial name="_ToDo" model="item" />
+            <a asp-page="ViewToDo" asp-route-id="@item.Id">View Task</a>
+        }
+    </div>
+</div>

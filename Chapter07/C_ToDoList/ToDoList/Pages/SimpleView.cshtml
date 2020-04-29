@@ -1,0 +1,11 @@
+﻿@page "{id}"
+@model ToDoList.Pages.SimpleViewModel
+
+<h1>Tasks to complete</h1>
+<ul>
+    @for (var i = 0; i < Model.ToDo.Tasks.Count; i++)
+    {
+        var task = Model.ToDo.Tasks[i];
+        <li>@i - @task</li>
+    }
+</ul>

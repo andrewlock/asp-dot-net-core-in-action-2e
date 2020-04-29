@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagHelpers", "TagHelpers\TagHelpers.csproj", "{5A84206A-C9EE-4222-B081-3C8D9D0B4983}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A84206A-C9EE-4222-B081-3C8D9D0B4983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A84206A-C9EE-4222-B081-3C8D9D0B4983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A84206A-C9EE-4222-B081-3C8D9D0B4983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A84206A-C9EE-4222-B081-3C8D9D0B4983}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BF01727-1BDA-4E42-B5F6-CABF466C50E7}
+	EndGlobalSection
+EndGlobal

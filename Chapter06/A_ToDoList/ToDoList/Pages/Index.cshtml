@@ -1,0 +1,9 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<ul>
+    <li><a asp-page="/ToDo/ListCategory" asp-route-category="open" asp-route-username="Andrew">View tasks for username and category</a></li>
+</ul>

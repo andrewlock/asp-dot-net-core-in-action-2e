@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<environment include="Development">
+    <div class="bg-warning p-2">
+        You are currently in a testing environment
+    </div>
+</environment>
+
+<environment include="Production">
+    <div class="bg-success p-2">
+        You are now in a PRODUCTION environment
+    </div>
+</environment>
+
+<div>
+    <h1 class="display-4 text-center">Home Page</h1>
+    <ul>
+        <li>The <code>Development</code> environment is the default, so you can run the application using <code>dotnet run</code>.</li>
+        <li>To run using the <code>Production</code> environment run the application using <code>dotnet run --environment Production</code>. Alternatively, update the <code>ASPNETCORE_ENVIRONMENT</code> environment variable (in the <i>launchSettings.json</i> file)</li>
+    </ul>
+</div>

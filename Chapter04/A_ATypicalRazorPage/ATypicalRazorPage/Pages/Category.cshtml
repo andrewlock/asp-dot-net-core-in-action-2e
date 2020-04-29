@@ -1,0 +1,30 @@
+﻿@page "{category}"
+@model ATypicalRazorPage.CategoryModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewCategory</title>
+</head>
+<body>
+    <h1>ToDo items:</h1>
+    @if (Model.Items.Any())
+    {
+        <ul>
+            @foreach (var item in Model.Items)
+            {
+                <li>@item.Title</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No items found</p>
+    }
+</body>
+</html>
