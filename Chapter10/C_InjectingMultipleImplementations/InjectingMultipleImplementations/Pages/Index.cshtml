@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>Send message through all registered senders</h2>
+<a asp-page="MultiMessage" asp-route-username="Joe Bloggs" class="btn btn-primary">Send Message</a>
+
+<h2>Send message through last registered sender</h2>
+<a asp-page="SingleMessage" asp-route-username="Joe Bloggs" class="btn btn-primary">Send Message</a>

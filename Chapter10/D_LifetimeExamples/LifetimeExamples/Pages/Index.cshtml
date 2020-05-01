@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Choose one of the options below to see how lifetime affects the values</h2>
+<h4>Refresh the page to see the values change (or stay the same!)</h4>
+<a asp-page="RowCount/Transient" class="btn btn-primary">Transient services</a>
+<a asp-page="RowCount/Scoped" class="btn btn-primary">Scoped services</a>
+<a asp-page="RowCount/Singleton" class="btn btn-primary">Singleton services</a>
+
+<h4>The following example shows a captured dependency - the data context is a scoped service so should be different every request, but the singleton repository "captures" it.</h4>
+<p>Note that the container verification would normally throw an exception on app startup in the Development environment, so that has been disabled</p>
+<a asp-page="RowCount/Captured" class="btn btn-primary">Singleton repository and scoped data context</a>
