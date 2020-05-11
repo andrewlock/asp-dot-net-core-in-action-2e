@@ -1,0 +1,79 @@
+﻿@page
+@model RecipeApplication.Pages.Recipes.CreateModel
+@{
+    ViewData["Title"] = "Create Recipe";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<form method="post" class="form-horizontal">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <partial name="_EditRecipePartial" model="Model.Input" />
+
+    <div class="form-group">
+        @* Creating sub-items like this at the same time as the parent is a PITA unfortunately - hacky JS ensues for now! *@
+        <table class="table table-striped" id="ingredients">
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Input.Ingredients.Count; i++)
+                {
+                    var ingredient = Model.Input.Ingredients[i];
+                    <tr>
+                        <td>
+                            <input asp-for="Input.Ingredients[i].Name" />
+                            <span asp-validation-for="Input.Ingredients[i].Name" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Input.Ingredients[i].Quantity" />
+                            <span asp-validation-for="Input.Ingredients[i].Quantity" class=" text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Input.Ingredients[i].Unit" />
+                            <span asp-validation-for="Input.Ingredients[i].Unit" class=" text-danger"></span>
+                        </td>
+                        <td>
+                            <a href="#" class="remove">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="button" class="btn btn-success" id="addIngredient">Add ingredient</button>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        var ingredients = $('#ingredients tbody');
+        $("#addIngredient").click(function () {
+            var rowNo = ingredients.find('tr').length;
+            var template =
+                '<tr>' +
+                '<td><input name="Ingredients[' + rowNo + '].Name" id="Ingredients_' + rowNo + '_Name" /></td>' +
+                '<td><input name="Ingredients[' + rowNo + '].Quantity" id="Ingredients_' + rowNo + 'Quantity" /></td>' +
+                '<td><input name="Ingredients[' + rowNo + '].Unit" id="Ingredients_' + rowNo + 'Unit" /></td>' +
+                '</tr>';
+            ingredients.append(template);
+        });
+
+        ingredients.on('click', '.remove', function (e) {
+            $(this).closest('tr').remove();
+        });
+    </script>
+}
