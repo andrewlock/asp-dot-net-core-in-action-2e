@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h4>Can Bind</h4>
+<dl>
+    <dt>@nameof(Model.Options.Dictionary)</dt>
+    <dd>@string.Join(",", Model.Options.Dictionary.Select(kvp => $"{kvp.Key}: {kvp.Value.Value}"))</dd>
+    <dt>@nameof(Model.Options.List)</dt>
+    <dd>@string.Join(",", Model.Options.List.Select(x => x.Value))</dd>
+    <dt>@nameof(Model.Options.IDictionary)</dt>
+    <dd>@string.Join(",", Model.Options.IDictionary.Select(kvp => $"{kvp.Key}: {kvp.Value.Value}"))</dd>
+    <dt>@nameof(Model.Options.IEnumerable)</dt>
+    <dd>@string.Join(",", Model.Options.IEnumerable.Select(x => x.Value))</dd>
+    <dt>@nameof(Model.Options.ReadOnlyCollection)</dt>
+    <dd>@string.Join(",", Model.Options.ReadOnlyCollection.Select(x => x.Value))</dd>
+    <dt>@nameof(Model.Options.Integer)</dt>
+    <dd>@Model.Options.Integer</dd>
+    <dt>@nameof(Model.Options.Object)</dt>
+    <dd>@Model.Options.Object.Value</dd>
+    <dt>@nameof(Model.Options.ReadOnly)</dt>
+    <dd>@Model.Options.ReadOnly.Value</dd>
+    <dt>@nameof(Model.Options.String)</dt>
+    <dd>@Model.Options.String</dd>
+</dl>
+
+<h4>Can't Bind</h4>
+<dl>
+    <dt>NotPublic</dt>
+    @*Can't list this as it's not public!  *@
+    @*  <dd>@Model.Options.NotPublic</dd>*@
+    <dt>@nameof(Model.Options.SetOnly)</dt>
+    <dd>@Model.Options._setOnly?.Value</dd>
+    <dt>@nameof(Model.Options.NullReadOnly)</dt>
+    <dd>@Model.Options.NullReadOnly?.Value</dd>
+    <dt>@nameof(Model.Options.NullPrivateSetter)</dt>
+    <dd>@Model.Options.NullPrivateSetter?.Value</dd>
+    <dt>@nameof(Model.Options.NullIEnumerable)</dt>
+    <dd>@(Model.Options.NullIEnumerable == null ? null : string.Join(",", Model.Options.NullIEnumerable.Select(x => x?.Value)))</dd>
+    <dt>@nameof(Model.Options.ReadOnlyEnumerable)</dt>
+    <dd>@string.Join(",", Model.Options.ReadOnlyEnumerable.Select(x => x.Value))</dd>
+    <dt>Indexer</dt>
+    @*Can't list this as itwill throw as not bound!  *@
+    @*<dd>@Model[0].Value</dd>*@
+</dl>

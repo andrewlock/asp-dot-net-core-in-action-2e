@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = Model.AppSettings.AppTitle;
+}
+
+<h3>@ViewData["Title"]</h3>
+
+@if (Model.AppSettings.ShowCopyright)
+{
+    <p>Mine! Hands off! ;)</p>
+}
+
+@if (string.IsNullOrEmpty(Model.MapSettings.GoogleMapsApiKey))
+{
+    <div class="alert alert-warning">
+        No API key found in settings. Follow the <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Googe Maps instructions</a> to obtain an API key, and then store it in User Secrets to make it available to your app.
+    </div>
+}
+
+<div id="map" style="width: 100%; height: 50vh; background: grey;"></div>
+
+<h4>Based on <a href="https://developers.google.com/maps/documentation/javascript/adding-a-google-map">Google Maps documentation</a></h4>
+
+<ul>
+    @foreach (var store in Model.Stores)
+    {
+        <li data-lat="@store.Location.Latitude" data-long="@store.Location.Longitude" class="stores">
+            @store.Name (@store.Location.Latitude, @store.Location.Longitude)
+        </li>
+    }
+</ul>
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: @Model.MapSettings.DefaultZoomLevel,
+            center: {
+                lat: @Model.MapSettings.DefaultLocation.Latitude,
+                lng: @Model.MapSettings.DefaultLocation.Longitude
+          }
+        });
+
+        var stores = Array.from(document.getElementsByClassName('stores'))
+            .map(el => {
+                var latLng = new google.maps.LatLng(
+                    el.dataset.lat,
+                    el.dataset.long);
+                return new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    title: el.innerText
+                });
+            });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=@(Model.MapSettings.GoogleMapsApiKey)&callback=initMap">
+</script>

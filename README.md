@@ -61,9 +61,14 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 * *ProblemDetailsExample* - A simple API controller that demonstrates automatically returning a `ValidationProblemDetails` object when the binding model (the `myValue` route parameter) is empty.
 * *CarsWebApi* - A Web API controller that demonstrates generating various different response types. Is configured to allow XML output in Startup.cs Use https://www.getpostman.com to make requests to the API. Also configured to use the _Newtonsoft.Json_ formatter instead of the _System.Text.Json_ formatter.
 
-
 ## [Chapter 10](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter10)
 * *SendingAnEmailWithoutDI* - An example demonstrating a use case where you want to send an email when a user registers. The `EmailSender` class is created in code using `new` as shown in section 10.1.1 and Listing 10.3.
 * *SendingAnEmailWithDI* - A refactoring of the *SendingAnEmailWithoutDI* project to use DI, showing how the `UserController` has been simplified.
 * *InjectingMultipleImplementations* - Example demonstrating the behaviour when registering multiple instances of a service, as in section 10.2.4. Click the buttons shown on the home page and observe the console output to see the effect of the DI configuration
 * *LifetimeExamples* - The effect of lifetime on DI. For details, see section 10.3 - the project broadly follows this outline, with slightly different naming to allow registering all the services in a single project.
+
+## [Chapter 11](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter11)
+* *ReplacingDefaultConfigProviders* - Demonstrating how you can replace the configuration providers added in `CreateDefaultBuilder`, as shown in section 11.3.1.
+* *StoreViewerApplication* - A simple application that uses `IOptions<>` and strongly typed settings to bind configuration to POCOs. Optionally uses Google Maps to demonstrate loading settings from multiple sources.  Follow the [documentation from Google](https://developers.google.com/maps/documentation/javascript/get-api-key) to obtain an API key.
+* *DesigningForAutomaticBinding* - Demonstrating how to create strongly typed settings that can be bound to configuration, and the limitations, as shown in section 11.4.3.
+* *LifetimeExamples* - Demonstrates how to overwrite values based on the environment. In particular, observe how list values are overwritten.
