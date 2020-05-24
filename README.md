@@ -83,3 +83,8 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 ## [Chapter 13](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter13)
 * *FilterPipelineExample* - A sample application with a single API Controller and a single Razor Page that contains one of each filter, and logs when the filter runs. Each filter contains commented out code to short-circuit the pipeline. Uncomment the code from each filter in turn to see the effect.
 * *RecipeApplication* - The RecipeApplication from chapter 12 plus two API controllers. The `NoApiController` includes the code from listing 13.8, while the `RecipeApiController` includes the code from listing 13.9 where the code is refactored to use filters.
+
+## [Chapter 14](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter14)
+* *DefaultTemplate* - The default web app template for ASP.NET Core with Authentication, as discussed in section 14.3.
+* *RecipeApplication* - The recipe application from chapter 13 with authentication added, as described in section 14.4. Also, the register page has been scaffolded to remove the references to external services, as described in section 14.5.
+* *RecipeApplicationWithNameClaim* - The recipe application with an additional field added to the `RegisterModel` to record the `FullName`, as described in section 14.6. The field is added as an extra claim when the user registers, and is displayed in the menu bar when a user logs in.
