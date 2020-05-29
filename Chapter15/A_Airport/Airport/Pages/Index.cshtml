@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Welcome to the airport!";
+}
+<h2>@ViewData["Title"].</h2>
+
+<p>
+    Are you allowed through security?
+    You must be logged in and have a boarding pass number to enter.
+</p>
+<p><a asp-page="Airport/AirportSecurity" class="btn btn-primary">Try and enter Security</a></p>

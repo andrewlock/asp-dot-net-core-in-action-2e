@@ -88,3 +88,7 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 * *DefaultTemplate* - The default web app template for ASP.NET Core with Authentication, as discussed in section 14.3.
 * *RecipeApplication* - The recipe application from chapter 13 with authentication added, as described in section 14.4. Also, the register page has been scaffolded to remove the references to external services, as described in section 14.5.
 * *RecipeApplicationWithNameClaim* - The recipe application with an additional field added to the `RegisterModel` to record the `FullName`, as described in section 14.6. The field is added as an extra claim when the user registers, and is displayed in the menu bar when a user logs in.
+
+## [Chapter 15](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter15)
+* *Airport* - An analogy to the airport example presented in section 15.1. There are 4 steps, Home Page, Through security, Enter airport lounge, Board the plane. You can set the claims for a user when you register. Which claims you add will determine how far through the airport you can get.
+* *RecipeApplication* - The recipe application from previous chapters, with authorization to prevent unauthorized users creating recipes, and resoure based authorization to ensure only the user which created a recipe can edit it.

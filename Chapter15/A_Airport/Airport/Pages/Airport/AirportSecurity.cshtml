@@ -1,0 +1,13 @@
+﻿@page
+@model global::Airport.Pages.Airport.AirportSecurityModel
+@{
+    ViewData["Title"] = "Airport Security";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>You made it insde airport security!</h3>
+
+<p>
+    Are you allowed into the aiport lounge?
+    You had better be a Gold class frequent flyer or work for the airline, and not be banned!
+</p>
+<p><a asp-page="Airport/AirportLounge" class="btn btn-primary">Enter Airport Lounge</a></p>
