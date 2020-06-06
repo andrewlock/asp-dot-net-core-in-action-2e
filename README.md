@@ -92,3 +92,6 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 ## [Chapter 15](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter15)
 * *Airport* - An analogy to the airport example presented in section 15.1. There are 4 steps, Home Page, Through security, Enter airport lounge, Board the plane. You can set the claims for a user when you register. Which claims you add will determine how far through the airport you can get.
 * *RecipeApplication* - The recipe application from previous chapters, with authorization to prevent unauthorized users creating recipes, and resoure based authorization to ensure only the user which created a recipe can edit it.
+
+## [Chapter 16](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter16)
+* *RecipeApplication* - The Recipe application from previous chapters, for hosting in IIS. Changed the LocalDb migrations and connection string to use SqlLite as connecting to a LocalDb instance from IIS can be problematic. Also, added additional JS and CSS files to demonstrate bundling and minifying, and added *bundleconfig.json*
