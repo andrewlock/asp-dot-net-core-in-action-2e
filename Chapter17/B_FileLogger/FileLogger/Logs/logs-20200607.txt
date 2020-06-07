@@ -1,0 +1,14 @@
+2020-06-07 12:29:39.830 +01:00 [Information] Microsoft.Hosting.Lifetime: Now listening on: https://localhost:5001
+2020-06-07 12:29:39.835 +01:00 [Information] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5000
+2020-06-07 12:29:39.835 +01:00 [Information] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2020-06-07 12:29:39.835 +01:00 [Information] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2020-06-07 12:29:39.835 +01:00 [Information] Microsoft.Hosting.Lifetime: Content root path: C:\repos\andrewlock\aspdotnet-core-in-action-2e\Chapter17\FileLogger\FileLogger
+2020-06-07 12:29:44.461 +01:00 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting HTTP/2 GET https://localhost:5001/weatherforecast  
+2020-06-07 12:29:44.484 +01:00 [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware: Executing endpoint 'FileLogger.Controllers.WeatherForecastController.Get (FileLogger)'
+2020-06-07 12:29:44.515 +01:00 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[FileLogger.WeatherForecast] Get() on controller FileLogger.Controllers.WeatherForecastController (FileLogger).
+2020-06-07 12:29:44.520 +01:00 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor: Executing ObjectResult, writing value of type 'FileLogger.WeatherForecast[]'.
+2020-06-07 12:29:44.539 +01:00 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker: Executed action FileLogger.Controllers.WeatherForecastController.Get (FileLogger) in 18.9649ms
+2020-06-07 12:29:44.539 +01:00 [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware: Executed endpoint 'FileLogger.Controllers.WeatherForecastController.Get (FileLogger)'
+2020-06-07 12:29:44.540 +01:00 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished in 80.5596ms 200 application/json; charset=utf-8
+2020-06-07 12:29:46.227 +01:00 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request starting HTTP/2 GET https://localhost:5001/service-worker.js  
+2020-06-07 12:29:46.228 +01:00 [Information] Microsoft.AspNetCore.Hosting.Diagnostics: Request finished in 1.131ms 404 

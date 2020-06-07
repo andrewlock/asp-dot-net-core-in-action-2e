@@ -95,3 +95,11 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 
 ## [Chapter 16](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter16)
 * *RecipeApplication* - The Recipe application from previous chapters, for hosting in IIS. Changed the LocalDb migrations and connection string to use SqlLite as connecting to a LocalDb instance from IIS can be problematic. Also, added additional JS and CSS files to demonstrate bundling and minifying, and added *bundleconfig.json*
+
+## [Chapter 17](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter17)
+
+* *RecipeApplication* - The recipe application from previous chapters with some additional logging added to some Razor Pages.
+* *FileLogger* - A simple Web API Project configured to write log messages to a rolling file by using a rolling file logging provider, as shown in section 17.3.1. Note that the log levels have been changed from the defaults in appsettings.json and appsettings.Development.json to show more in the logs.
+* *SerilogLogger* - A simple Web API Project configured to write log messages to the console using Serilog, as shown in section 17.3.2.
+* *LogFiltering* - A simple Web API Project configured to use the configuration filters defined in section 17.4.
+* *SeqLogger* - A simple web API project to demonstrate structured logging using Seq, and using scopes to add additional properties to a log, as shown in section 17.5.
