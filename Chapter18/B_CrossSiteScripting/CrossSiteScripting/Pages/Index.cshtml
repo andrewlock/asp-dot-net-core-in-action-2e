@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@inject System.Text.Encodings.Web.JavaScriptEncoder encoder;
+@{
+    ViewData["Title"] = "Home Page";
+    var name = "Arnold \"Arnie\" Schwarzenegger";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>This app demonstrates some cross-site scripting vulnerabilities, and mitigations</h2>
+        <p>
+            <a asp-page="Vulnerable" class="btn btn-primary">View vulnerable page</a>
+            <a asp-page="Protected" class="btn btn-primary">View protected page</a>
+        </p>
+        <p>You can view how the HTML, JavaScript, and URL encoders differ in the characters they encode below</p>
+        <p>Click the buttons below to compare HTML encoding JavaScript variables, JavaScript encoding, and using data attributes</p>
+        <p>
+            <button id="html-encoding" class="btn btn-primary">HTML encoding</button>
+            <button id="js-encoding" class="btn btn-primary">JavaScript encoding</button>
+            <button id="data-encoding" class="btn btn-primary">Data attributes</button>
+        </p>
+    </div>
+</div>
+
+
+<div id="data" data-name="@name"></div>
+<script>
+    document.getElementById('html-encoding').addEventListener('click', function () {
+        alert('@name');
+    })
+    document.getElementById('js-encoding').addEventListener('click', function () {
+        alert('@encoder.Encode(name)');
+    })
+    document.getElementById('data-encoding').addEventListener('click', function () {
+        var name = document.getElementById('data').getAttribute('data-name');
+        alert(name);
+    })
+</script>

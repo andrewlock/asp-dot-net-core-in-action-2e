@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApplication", "BankingApplication\BankingApplication.csproj", "{82CB82CA-6A24-4925-A6CD-4D5FDBCF2FF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaliciousAttackerWebsite", "MaliciousAttackerWebsite\MaliciousAttackerWebsite.csproj", "{D7059498-B8F1-4C96-BAC1-8E8DB305F451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82CB82CA-6A24-4925-A6CD-4D5FDBCF2FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82CB82CA-6A24-4925-A6CD-4D5FDBCF2FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82CB82CA-6A24-4925-A6CD-4D5FDBCF2FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82CB82CA-6A24-4925-A6CD-4D5FDBCF2FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7059498-B8F1-4C96-BAC1-8E8DB305F451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7059498-B8F1-4C96-BAC1-8E8DB305F451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7059498-B8F1-4C96-BAC1-8E8DB305F451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7059498-B8F1-4C96-BAC1-8E8DB305F451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66160504-1406-463C-894F-73C668AEC21F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+﻿@page
+@model VulnerableModel
+@using System.Text.Encodings.Web;
+@inject JavaScriptEncoder encoder;
+
+@{
+    ViewData["Title"] = "Vulnerable page";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>This page demonstrates how you can leave yourself open to Cross-Site scripting attacks, in which an attacker executes code in another user's browser.</h3>
+<p>In this example, user's are allowed to submit their name to your app. The app displays a list of all the names entered to anyone who views the site.</p>
+<p>By not encoding the user input before it's rendered to the site, the attacher is able to execute code in the browser (by default make an alert pop up)</p>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="e.g. <script>alert('Oh no! XSS!')</script>" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h4>Previous values from HTML:</h4>
+<ul>
+    @foreach (var item in DataService.Data)
+    {
+        // WARNING! Html.Raw makes this Vulnerable!
+        <li>@Html.Raw(item)</li>
+    }
+</ul>

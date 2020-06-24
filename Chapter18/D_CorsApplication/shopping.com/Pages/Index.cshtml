@@ -1,0 +1,67 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>CORS example</h2>
+<p>This page sends requests to http://localhost:5111 (api.shopping.com) to fetch a list of products. Press <code>F12</code> to view the full log, and failed CORS messages</p>
+
+<h3>Products:</h3>
+<ul id="products"></ul>
+
+<h3>Log:</h3>
+<div id="debugDiv" style="{height: 200px; width: 500px; border: 1px solid #333; overflow:scroll;}"></div>
+
+@section Scripts
+{
+    <script>
+        var api = 'https://localhost:5111/api/products';
+        showLogAsHtml();
+        console.log('Loading home page...');
+
+        console.log('Sending request to ' + api + '...');
+
+        fetch(api)
+            .then(response => {
+                console.log('Recieved data, parsing JSON');
+                return response.json()
+            })
+            .then(data => {
+                showList(data);
+            })
+            .catch(error => {
+                console.log("An error occurred while loading the products.");
+                console.log(error);
+            });
+
+        function showList(products) {
+            var ul = document.getElementById('products');
+            for (var i = 0; i < products.length; i++) {
+                var li = document.createElement('li')
+                li.textContent = products[i];
+                ul.appendChild(li);
+            }
+            console.log('Request complete');
+        }
+
+        function showLogAsHtml() {
+            if (typeof console != "undefined") {
+                if (typeof console.log != 'undefined') {
+                    console.olog = console.log;
+                } else {
+                    console.olog = function () { };
+                }
+            }
+
+            console.log = function (message) {
+                console.olog(message);
+                var node = document.createElement('p');
+                node.appendChild(document.createTextNode(message));
+                document.getElementById('debugDiv').appendChild(node);
+            };
+            console.error = console.debug = console.info = console.log
+        }
+
+    </script>
+}

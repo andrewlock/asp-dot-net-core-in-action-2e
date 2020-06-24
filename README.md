@@ -103,3 +103,17 @@ This repository contains the code samples for *ASP.NET Core in Action, Second Ed
 * *SerilogLogger* - A simple Web API Project configured to write log messages to the console using Serilog, as shown in section 17.3.2.
 * *LogFiltering* - A simple Web API Project configured to use the configuration filters defined in section 17.4.
 * *SeqLogger* - A simple web API project to demonstrate structured logging using Seq, and using scopes to add additional properties to a log, as shown in section 17.5.
+
+## [Chapter 18](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter18)
+
+* *CustomHttpsCertificate* - A basic Razor Pages app using Kestrel with a self-signed certificate, similar to the way you would configure a certificate in production. Shows configuring the default certificate used by Kestrel in _appsettings.json_.
+
+On Windows, you can generate a self-signed certificate using the *Install-Certificate.ps1* PowerShell script. This will create a self-signed certificate and add it to Windows' trusted certificate store.
+
+You can generate a certificate on Ubuntu using *install_certificate.sh*. This uses *localhost.conf* to create a self signed certificate, and trusts it. On Linux, not all applications use the same store, so you may have to trust it explicitly for those applications. Use password `testpassword` to create the certificate.
+
+* *CrossSiteScripting* - A simple app to demonstrate XSS attacks due to not encoding user input. The user submits content which is added to an internal list and is later rendered to the page. Using `@Html.Raw` renders the provided input exactly as it was entered - if the content is malicious, e.g. a `<script>` tag, then it is written into the page as a script tag, executing any code it contains. Instead, you should render content with the `@` symbol alone - that way the content is rendered as a string, and can be displayed safely.
+
+* *CrossSiteRequestForgery* - A pair of apps to demonstrate a CSRF vulnerability. You can login to the banking application and view your balance. You can 'withdraw' funds using the provided form, and you'll see your balance reduce. The attacker website contains a form that posts to the banking application and withdraws funds for the currently logged in user. In the example you have to click the button to see the vulnerability, but this could easily be automated. To protect the endpoint, add the `[ValidateAntiForgeryToken]` attribute to the `BalanceController.Withdraw()` action. Run both applications by selecting "Set Startup Projects" in Visual Studio, or by running both applications using `dotnet run`.
+
+* *CorsApplication* - A pair of apps to demonstrate CORS. The "shopping.com" site is a Razor Pages application, that loads a product list from a separate app, "api.shopping.com", hosted at a different host. With the default configuration, the request succeeds. Experiment by removing the default CORS policy from the `UseCors()` middleware configuration, and applying `[EnableCors]` to the `ProductsController` instead. Note that it's the _API_ that defines which applications can call it. Run both applications by selecting "Set Startup Projects" in Visual Studio, or by running both applications using `dotnet run`.

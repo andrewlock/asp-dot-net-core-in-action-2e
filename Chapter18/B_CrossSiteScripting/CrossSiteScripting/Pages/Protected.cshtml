@@ -1,0 +1,28 @@
+﻿@page
+@model ProtectedModel
+@{
+    ViewData["Title"] = "Protected page";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>This page demonstrates how you can protect against Cross-Site scripting attacks, in which an attacker executes code in another user's browser.</h3>
+<p>In this example, user's are allowed to submit their name to your app. The app displays a list of all the names entered to anyone who views the site.</p>
+<p>
+    Even if a user enters malicious content, it is encoded to make it safe before it's rendered to the page, by using the standard <code>@@</code> symbol.
+    If you had instead used <code>@@Html.Raw()</code> then you would be vulnerable to XSS attacks
+</p>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="e.g. <script>alert('Oh no! XSS!')</script>" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h4>Previous values from HTML:</h4>
+<ul>
+    @foreach (var item in DataService.Data)
+    {
+        <li>@item</li>
+    }
+</ul>
