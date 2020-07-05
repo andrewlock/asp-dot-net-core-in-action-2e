@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Currency converter";
+}
+
+<h1>Click submit to make a request, and see the results</h1>
+
+<form method="post">
+    <p>Valid Currencies: @string.Join(",", Model.Currencies)</p>
+    <div class="form-group">
+        <label asp-for="Input.CurrencyFrom"></label>
+        <input asp-for="Input.CurrencyFrom" class="form-control" />
+        <span asp-validation-for="Input.CurrencyFrom" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.CurrencyTo"></label>
+        <input asp-for="Input.CurrencyTo" class="form-control" />
+        <span asp-validation-for="Input.CurrencyTo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.Quantity"></label>
+        <input asp-for="Input.Quantity" class="form-control" />
+        <span asp-validation-for="Input.Quantity" class="text-danger"></span>
+    </div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Results))
+{
+    <h3>Results:</h3>
+    <p>@Model.Results</p>
+
+}
+
+@section scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

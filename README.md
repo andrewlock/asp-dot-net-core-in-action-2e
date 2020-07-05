@@ -125,3 +125,11 @@ You can generate a certificate on Ubuntu using *install_certificate.sh*. This us
 * *CustomConfiguration* - Loading configuration in multiple stages, as described in section 19.3.1. The _baseconfig.xml_ file is loaded first, and is used to locate the _appsettings.json_ file, which is added to the configuration.
 * *CustomConfigurationExample* - Configuring `IOptions` using services as described in section 19.3.2. The `CurrencyOptions` in configured in multiple ways - from configuration values, from static values (using a Lambda), and using `ConfigureCurrencyOptions` which uses a service registered in the DI container.
 * *LamarExample* - Replacing the default DI container with Lamar (the successor to StructureMap), as in section 19.4. Demonstrates some of the functionality available in Lamar.
+
+## [Chapter 20](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter20)
+
+* *CustomTagHelpers* - Creating custom Tag Helpers, an `IfTagHelper` and `SystemInfoTagHelper`, as shown in section 20.1.
+* *RecipeApplication* - The Recipe Application from previous chapters, this time with a custom view component, as described in section 20.2.
+* *CurrencyConverter* - The demo Currency converter application, containing a custom validation attribute for validating the selected currencies, as in section 20.3.
+* *FluentValidationConverter* - The demo Currency converter application, configured to use the FluentValidation library instead of DataAnnotations. Contains validation extension methods for validating the selected currencies, as in section 20.4.
+

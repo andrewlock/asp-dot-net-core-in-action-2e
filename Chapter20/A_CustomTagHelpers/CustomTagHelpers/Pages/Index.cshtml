@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    var showContent = true;
+}
+
+@if (showContent)
+{
+    <p>The content to show</p>
+}
+
+<p if="showContent">
+    Rendered when <code>showContent</code> is true
+</p>
+
+<p if="!showContent">
+    Rendered when <code>showContent</code> is false
+</p>
+
+<markdown>
+## This is a markdown title
+
+This is a markdown list:
+
+* Item 1
+* Item 2
+
+<div if="!showContent">
+  Content is shown when showContent is false
+</div>
+
+The value of `@(nameof(showContent)) is `@showContent`
+
+[This is a link](https://www.manning.com/books/asp-net-core-in-action-second-edition)
+</markdown>
+
+<h3>All info:</h3>
+<system-info />
+
+<h3>Machine only:</h3>
+<system-info add-os="false"></system-info>
+
+<h3>No info:</h3>
+<system-info add-machine="false" add-os="false"></system-info>
+
