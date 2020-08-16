@@ -12,6 +12,11 @@ namespace RecipeApplication
             if (context.Result is OkObjectResult result
                 && result.Value is RecipeDetailViewModel detail)
             {
+                // If the LastModified header has been sent with the request, we can
+                // check to see if is the same (or later) than the view model's date
+                // If it is, then we can tell the browser "it's the same" using a 304 response
+                // and avoid the cost associated with serializing and sending the model
+                var viewModelDate = detail.LastModified;
                 var lastModified = context.HttpContext.Request
                     .GetTypedHeaders().IfModifiedSince;
 
@@ -21,8 +26,7 @@ namespace RecipeApplication
                     context.Result = new StatusCodeResult(304);
                 }
 
-                context.HttpContext.Response.GetTypedHeaders().LastModified
-                    = detail.LastModified;
+                context.HttpContext.Response.GetTypedHeaders().LastModified = viewModelDate;
             }
         }
     }
