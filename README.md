@@ -151,5 +151,5 @@ You can generate a certificate on Ubuntu using *install_certificate.sh*. This us
 
 ## [Chapter 22](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter22)
 
-* *ExchangeRates* - A basic exchange rate application. Includes unit tests for the `CurrencyConverter` class, for the `StatusMiddleware`, and for both MVC and Web API controllers. Also includes integration tests for the `StatusMiddleware` and for MVC pages.
-* *RecipeApplication* - Testing a service that relies on an EF Core `DbContext`, as described in section 22.6. The `RecipeServiceTests` class shows how you can test the `RecipeService`. 
+* *ExchangeRates* - A basic exchange rate application. Includes unit tests for the `CurrencyConverter` class (section 22.2), for the `StatusMiddleware` (section 22.3), and for API controllers (section 22.4). It also includes "Test Host" integration tests for the `StatusMiddleware` (section 22.5.1) as well as `WebApplicationFactory`-based integration tests for the whole app (section 22.5.2, 22.5.3, 22.5.4).
+* *RecipeApplication* - Testing a service that relies on an EF Core `DbContext`, as described in section 22.6. The `RecipeServiceTests` class shows how you can test the `RecipeService` using the in-memory SQLite provider. Also shows a custom `WebApplicationFactory` implementation that uses an in-memory database.

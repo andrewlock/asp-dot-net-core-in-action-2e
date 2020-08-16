@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<p>Enter values and click convert</p>
+<div class="row">
+    <div class="col-sm-8">
+        <form asp-action="Index" method="post">
+            <div class="form-group">
+                <label asp-for="Input.Value"></label>
+                <input asp-for="Input.Value" class="form-control" />
+                <span asp-validation-for="Input.Value"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ExchangeRate"></label>
+                <input asp-for="Input.ExchangeRate" class="form-control" />
+                <span asp-validation-for="Input.ExchangeRate"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.DecimalPlaces"></label>
+                <input asp-for="Input.DecimalPlaces" class="form-control" />
+                <span asp-validation-for="Input.DecimalPlaces"></span>
+            </div>
+            <div class="form-group">
+                <span>= @Model.Result</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Convert</button>
+            <div asp-validation-summary="ModelOnly"></div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
