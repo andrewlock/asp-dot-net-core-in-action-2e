@@ -117,7 +117,7 @@ namespace RecipeApplication
         public async Task DeleteRecipe(int recipeId)
         {
             var recipe = await _context.Recipes.FindAsync(recipeId);
-            if (recipe.IsDeleted) { throw new Exception("Unable to delete a deleted recipe"); }
+            if (recipe is null) { throw new Exception("Unable to find recipe"); }
 
             recipe.IsDeleted = true;
             await _context.SaveChangesAsync();
