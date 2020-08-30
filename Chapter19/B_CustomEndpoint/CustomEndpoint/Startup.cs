@@ -52,6 +52,14 @@ namespace CustomEndpoint
             {
                 endpoints.MapRazorPages();
 
+                // Build the pipeline in-line
+                var endpoint = endpoints
+                    .CreateApplicationBuilder()
+                    .UseMiddleware<PingPongMiddleware>()
+                    .Build();
+
+                endpoints.Map("/pip-pip", endpoint);
+
                 // See EndpointRouteBuilderExtensions for the definition of these methods
                 endpoints.MapVersion("/version");
                 endpoints.MapPingPong("/ping");
