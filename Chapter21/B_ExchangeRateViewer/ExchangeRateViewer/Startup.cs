@@ -37,6 +37,7 @@ namespace ExchangeRateViewer
             .ConfigureHttpClient((IServiceProvider provider, HttpClient client) => { }); // additional configuration
 
             services.AddHttpClient<ExchangeRatesClient>()
+                .AddHttpMessageHandler<ApiKeyMessageHandler>()
                 .AddTransientHttpErrorPolicy(policy =>
                     policy.WaitAndRetryAsync(new[] {
                         TimeSpan.FromMilliseconds(200),
@@ -44,6 +45,9 @@ namespace ExchangeRateViewer
                         TimeSpan.FromSeconds(5)
                     })
                 );
+
+            services.AddTransient<ApiKeyMessageHandler>();
+            services.Configure<ExchangeRateApiSettings>(Configuration.GetSection("ExchangeRateApiSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
