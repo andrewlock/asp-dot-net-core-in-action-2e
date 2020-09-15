@@ -137,19 +137,23 @@ You can generate a certificate on Ubuntu using *install_certificate.sh*. This us
 
 * *SocketExhaustion* - A simple application that creates many `HttpClient`s, demonstrating sockets being consumed. Run `netstat` in a separate window, to view sockets stuck in the `TIME_WAIT` status, as discussed in section 21.1.1.
 * *ExchangeRateViewer* - An API controller that calls a remote exchange rate API, and returns the value. Shows 4 different ways of using `HttpClient` and `IHttpClientFactory`:
-  * Singleton `HttpClient`: A single `HttpClient` that lives for the life of the application, as discussed in section 21.1.1. This client won't respect DNS changes.
-  * Using `IHttpClientFactory` to create an `HttpClient`, as described in section 21.1.2.
-  * Using a _named_ `HttpClient`, as described in section 21.1.3
-  * Creating a _typed_ `HttpClient`, as described in section 21.1.4
-  * Adding transient error handling using _Polly_ in `Startup.ConfigureServices()`, as described in section 21.1.5.
-* *BackgroundServiceCache* - An `IHostedService` that downloads exchange rates from a remote API and saves them in a dictionary, for consumption by an API controller, as described in section 21.2.1
-* *BackgroundServiceDatabaseCache* - An `IHostedService` that uses scoped services, downloads exchange rates from a remote API and saves them in a dictionary, as described in section 21.2.2
-* *SystemdService* - A generic `Host` to download exchange rates, configured to executes as a systemd daemon, as described in section 21.3
-* *WindowsService* - A generic `Host` to download exchange rates, configured to executes as a Windows Service, as described in section 21.3.
-* *QuartzHostedService* - A generic `Host` that uses Quartz.NET to run background tasks
-* *QuartzClustering* - A generic `Host` that uses Quartz.NET to run background tasks configured to use clustering. Note that SQLite is not supported for clustering, so this application uses LocalDB
+  * Singleton `HttpClient`: A single `HttpClient` that lives for the life of the application, as discussed in section 21.1. This client won't respect DNS changes.
+  * Using `IHttpClientFactory` to create an `HttpClient`, as described in section 21.2.1.
+  * Using a _named_ `HttpClient`, as described in section 21.2.2
+  * Creating a _typed_ `HttpClient`, as described in section 21.2.3
+  * Adding transient error handling using _Polly_ in `Startup.ConfigureServices()`, as described in section 21.3
+  * Creating a custom `HttpMessageHandler` for adding an API key, as described in section 21.4
 
 ## [Chapter 22](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter22)
 
-* *ExchangeRates* - A basic exchange rate application. Includes unit tests for the `CurrencyConverter` class (section 22.2), for the `StatusMiddleware` (section 22.3), and for API controllers (section 22.4). It also includes "Test Host" integration tests for the `StatusMiddleware` (section 22.5.1) as well as `WebApplicationFactory`-based integration tests for the whole app (section 22.5.2, 22.5.3, 22.5.4).
-* *RecipeApplication* - Testing a service that relies on an EF Core `DbContext`, as described in section 22.6. The `RecipeServiceTests` class shows how you can test the `RecipeService` using the in-memory SQLite provider. Also shows a custom `WebApplicationFactory` implementation that uses an in-memory database.
+* *BackgroundServiceCache* - An `IHostedService` that downloads exchange rates from a remote API and saves them in a dictionary, for consumption by an API controller, as described in section 22.1.1
+* *BackgroundServiceDatabaseCache* - An `IHostedService` that uses scoped services, downloads exchange rates from a remote API and saves them in a dictionary, as described in section 22.1.2
+* *SystemdService* - A generic `Host` to download exchange rates, configured to executes as a systemd daemon, as described in section 22.2
+* *WindowsService* - A generic `Host` to download exchange rates, configured to executes as a Windows Service, as described in section 22.2.
+* *QuartzHostedService* - A generic `Host` that uses Quartz.NET to run background tasks
+* *QuartzClustering* - A generic `Host` that uses Quartz.NET to run background tasks configured to use clustering. Note that SQLite is not supported for clustering, so this application uses LocalDB
+
+## [Chapter 23](https://github.com/andrewlock/asp-dot-net-core-in-action-2e/tree/master/Chapter23)
+
+* *ExchangeRates* - A basic exchange rate application. Includes unit tests for the `CurrencyConverter` class (section 23.2), for the `StatusMiddleware` (section 23.3), and for API controllers (section 23.4). It also includes "Test Host" integration tests for the `StatusMiddleware` (section 23.5.1) as well as `WebApplicationFactory`-based integration tests for the whole app (section 23.5.2, 23.5.3, 23.5.4).
+* *RecipeApplication* - Testing a service that relies on an EF Core `DbContext`, as described in section 23.6. The `RecipeServiceTests` class shows how you can test the `RecipeService` using the in-memory SQLite provider. Also shows a custom `WebApplicationFactory` implementation that uses an in-memory database.
