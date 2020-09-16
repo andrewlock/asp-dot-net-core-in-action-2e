@@ -27,10 +27,6 @@ namespace CustomConfiguration
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CurrencyOptions>(Configuration.GetSection("Currencies"));
-            services.Configure<CurrencyOptions>(options =>
-                options.Currencies = new string[] { "GBP", "USD", "EUR" });
-            services.AddSingleton<IConfigureOptions<CurrencyOptions>, ConfigureCurrencyOptions>();
-            services.AddSingleton<ICurrencyProvider, CurrencyProvider>();
             services.AddControllers();
         }
 
