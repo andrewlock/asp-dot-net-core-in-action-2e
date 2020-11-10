@@ -6,9 +6,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using SimpleRazorPagesApplicationAndHoldingPage;
 
-namespace SimpleRazorPagesApplication
+namespace SimpleRazorPagesApplicationAndHoldingPage
 {
     public class Program
     {
