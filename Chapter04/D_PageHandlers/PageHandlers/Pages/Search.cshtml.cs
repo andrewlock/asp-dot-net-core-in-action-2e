@@ -10,7 +10,7 @@ namespace PageHandlers
 {
     public class SearchModel : PageModel
     {
-        private SearchService _searchService;
+        private readonly SearchService _searchService;
         public SearchModel(SearchService searchService)
         {
             _searchService = searchService;
