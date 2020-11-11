@@ -1,10 +1,10 @@
 ﻿{
   "iisSettings": {
-    "windowsAuthentication": false, 
-    "anonymousAuthentication": true, 
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:63391",
-      "sslPort": 44321
+      "applicationUrl": "http://localhost:50473",
+      "sslPort": 44324
     }
   },
   "profiles": {
@@ -17,6 +17,7 @@
     },
     "DyamicHtml": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
