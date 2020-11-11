@@ -12,7 +12,7 @@ namespace SendingAnEmailWithoutDI.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        [Route("register")]
+        [HttpPost("register")]
         public IActionResult RegisterUser(string username)
         {
             var emailSender = new EmailSender(

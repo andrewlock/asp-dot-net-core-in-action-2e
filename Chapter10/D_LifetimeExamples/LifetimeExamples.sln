@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifetimeExamples", "LifetimeExamples\LifetimeExamples.csproj", "{F097FF6A-2681-4A0A-896C-B4E570F5DD25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifetimeExamples", "LifetimeExamples\LifetimeExamples.csproj", "{73CB26D0-5B47-4468-8E25-6286FB1CD24F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F097FF6A-2681-4A0A-896C-B4E570F5DD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F097FF6A-2681-4A0A-896C-B4E570F5DD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F097FF6A-2681-4A0A-896C-B4E570F5DD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F097FF6A-2681-4A0A-896C-B4E570F5DD25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73CB26D0-5B47-4468-8E25-6286FB1CD24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CB26D0-5B47-4468-8E25-6286FB1CD24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73CB26D0-5B47-4468-8E25-6286FB1CD24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73CB26D0-5B47-4468-8E25-6286FB1CD24F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F3721AC4-DB2B-43DE-8C4D-C013BFD48A11}
+		SolutionGuid = {E48AACD7-3484-4134-B8D6-FB53BA419145}
 	EndGlobalSection
 EndGlobal

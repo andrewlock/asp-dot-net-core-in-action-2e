@@ -1,4 +1,4 @@
-﻿namespace InjectingMultipleServices.Services
+﻿namespace InjectingMultipleImplementations.Services
 {
     public interface IMessageSender
     {

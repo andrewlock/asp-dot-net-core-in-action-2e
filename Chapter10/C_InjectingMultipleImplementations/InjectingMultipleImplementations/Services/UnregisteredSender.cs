@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InjectingMultipleServices.Services
+namespace InjectingMultipleImplementations.Services
 {
     public class UnregisteredSender : IMessageSender
     {

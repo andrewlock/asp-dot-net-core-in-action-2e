@@ -4,23 +4,24 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58237",
-      "sslPort": 44393
+      "applicationUrl": "http://localhost:52456",
+      "sslPort": 44392
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "user/register",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "SendingAnEmailWithDI": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": true,
-      "launchUrl": "user/register",
+      "launchUrl": "swagger",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

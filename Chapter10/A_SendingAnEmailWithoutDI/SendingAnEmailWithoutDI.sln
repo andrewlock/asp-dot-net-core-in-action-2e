@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendingAnEmailWithoutDI", "SendingAnEmailWithoutDI\SendingAnEmailWithoutDI.csproj", "{417C714E-650D-4E96-B6F4-BA63242B613D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendingAnEmailWithoutDI", "SendingAnEmailWithoutDI\SendingAnEmailWithoutDI.csproj", "{65D6DD19-2466-4B18-B680-6F48B3063F2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{417C714E-650D-4E96-B6F4-BA63242B613D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{417C714E-650D-4E96-B6F4-BA63242B613D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{417C714E-650D-4E96-B6F4-BA63242B613D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{417C714E-650D-4E96-B6F4-BA63242B613D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D6DD19-2466-4B18-B680-6F48B3063F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D6DD19-2466-4B18-B680-6F48B3063F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D6DD19-2466-4B18-B680-6F48B3063F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D6DD19-2466-4B18-B680-6F48B3063F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B86F9CB9-123C-45A0-95E3-902ED36445DF}
+		SolutionGuid = {69A1ABE6-7046-4144-BAC8-8681101BFD61}
 	EndGlobalSection
 EndGlobal
