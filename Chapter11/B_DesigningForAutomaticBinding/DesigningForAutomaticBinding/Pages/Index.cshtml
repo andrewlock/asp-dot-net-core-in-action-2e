@@ -41,6 +41,8 @@
     <dd>@(Model.Options.NullIEnumerable == null ? null : string.Join(",", Model.Options.NullIEnumerable.Select(x => x?.Value)))</dd>
     <dt>@nameof(Model.Options.ReadOnlyEnumerable)</dt>
     <dd>@string.Join(",", Model.Options.ReadOnlyEnumerable.Select(x => x.Value))</dd>
+    <dt>@nameof(Model.Options.DictionaryWithNonStringKeys)</dt>
+    <dd>@string.Join(",", Model.Options.DictionaryWithNonStringKeys.Select(kvp => $"{kvp.Key}: {kvp.Value.Value}"))</dd>
     <dt>Indexer</dt>
     @*Can't list this as itwill throw as not bound!  *@
     @*<dd>@Model[0].Value</dd>*@
