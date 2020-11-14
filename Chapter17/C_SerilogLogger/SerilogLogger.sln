@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogLogger", "SerilogLogger\SerilogLogger.csproj", "{7A998FF8-CCE7-4EB4-A8E4-6E47C9AF2DB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogLogger", "SerilogLogger\SerilogLogger.csproj", "{38CC5888-D806-441C-A88D-5FBBA440AE7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A998FF8-CCE7-4EB4-A8E4-6E47C9AF2DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A998FF8-CCE7-4EB4-A8E4-6E47C9AF2DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A998FF8-CCE7-4EB4-A8E4-6E47C9AF2DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A998FF8-CCE7-4EB4-A8E4-6E47C9AF2DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38CC5888-D806-441C-A88D-5FBBA440AE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38CC5888-D806-441C-A88D-5FBBA440AE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38CC5888-D806-441C-A88D-5FBBA440AE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38CC5888-D806-441C-A88D-5FBBA440AE7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {988F48C1-A95B-433D-B14C-48C86CA44BCE}
+		SolutionGuid = {81EC4AA6-45F3-4779-BF6D-A64CF9F5A5C7}
 	EndGlobalSection
 EndGlobal
