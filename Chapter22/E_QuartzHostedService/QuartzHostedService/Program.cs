@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +5,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
 using Quartz;
 using QuartzHostedService.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace QuartzHostedService
 {
@@ -42,8 +42,6 @@ namespace QuartzHostedService
                         // Use a Scoped container for creating IJobs
                         q.UseMicrosoftDependencyInjectionScopedJobFactory();
 
-                        q.UseSimpleTypeLoader();
-
                         // add the job
                         var jobKey = new JobKey("Update exchange rates");
                         q.AddJob<UpdateExchangeRatesJob>(opts => opts.WithIdentity(jobKey));
@@ -55,7 +53,7 @@ namespace QuartzHostedService
                                 .RepeatForever())
                         );
                     });
-                    services.AddQuartzServer(q => q.WaitForJobsToComplete = true);
+                    services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
                 });
     }
 }

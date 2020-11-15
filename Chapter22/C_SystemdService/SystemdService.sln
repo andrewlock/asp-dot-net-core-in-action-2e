@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30309.148
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemdService", "SystemdService\SystemdService.csproj", "{BE11F90D-06AE-43E8-94C4-6AE24F518583}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemdService", "SystemdService\SystemdService.csproj", "{10F9A7E5-D772-405A-A3B3-9EB536C0417F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE11F90D-06AE-43E8-94C4-6AE24F518583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE11F90D-06AE-43E8-94C4-6AE24F518583}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE11F90D-06AE-43E8-94C4-6AE24F518583}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE11F90D-06AE-43E8-94C4-6AE24F518583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10F9A7E5-D772-405A-A3B3-9EB536C0417F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10F9A7E5-D772-405A-A3B3-9EB536C0417F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10F9A7E5-D772-405A-A3B3-9EB536C0417F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10F9A7E5-D772-405A-A3B3-9EB536C0417F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5FD436B6-61D8-4821-A945-D7E5464B0FE6}
+		SolutionGuid = {15E9BDD7-F1AC-4E45-B235-1A7FBC289AFE}
 	EndGlobalSection
 EndGlobal

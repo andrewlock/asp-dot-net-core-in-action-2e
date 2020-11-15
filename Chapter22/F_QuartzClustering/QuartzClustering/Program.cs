@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +5,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Net.Http.Headers;
 using Quartz;
 using QuartzClustering.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace QuartzClustering
 {
@@ -43,8 +43,6 @@ namespace QuartzClustering
                         // Use a Scoped container for creating IJobs
                         q.UseMicrosoftDependencyInjectionScopedJobFactory();
 
-                        q.UseSimpleTypeLoader();
-
                         q.UsePersistentStore(s =>
                         {
                             s.UseSqlServer(connectionString);
@@ -75,7 +73,7 @@ namespace QuartzClustering
                             )
                         );
                     });
-                    services.AddQuartzServer(q => q.WaitForJobsToComplete = true);
+                    services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
                 });
     }
 }
