@@ -14,6 +14,7 @@ namespace FilterPipelineExample.Pages
     [LogPageFilter]
     [LogAuthorizationFilter]
     [LogResultFilter]
+    [LogAlwaysRunResultFilter]
     [LogExceptionFilter]
     public class IndexModel : PageModel
     {

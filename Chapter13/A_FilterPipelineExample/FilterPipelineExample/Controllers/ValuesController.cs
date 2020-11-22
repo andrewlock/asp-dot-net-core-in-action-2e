@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 namespace FilterPipelineExample.Controllers
 {
     [ApiController]
-    [LogResourceFilter, LogActionFilter, LogAuthorizationFilter, LogResultFilter, LogExceptionFilter]
+    [LogResourceFilter, LogActionFilter, LogAuthorizationFilter, LogResultFilter, LogExceptionFilter, LogAlwaysRunResultFilter]
     public class ValuesController : Controller
     {
         [HttpGet("values")]

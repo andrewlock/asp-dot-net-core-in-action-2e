@@ -33,6 +33,7 @@ namespace FilterPipelineExample
                 options.Filters.Add(new GlobalLogAsyncExceptionFilter());
                 options.Filters.Add(new GlobalLogAsyncResourceFilter());
                 options.Filters.Add(new GlobalLogAsyncResultFilter());
+                options.Filters.Add(new GlobalLogAsyncAlwaysRunResultFilter());
             });
         }
 
