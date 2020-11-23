@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30309.148
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketExhaustion", "SocketExhaustion\SocketExhaustion.csproj", "{906171D0-2025-4DC1-B2C1-835644BCDD68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketExhaustion", "SocketExhaustion\SocketExhaustion.csproj", "{C4F00544-3E10-4F14-AAF4-A83EA8297FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{906171D0-2025-4DC1-B2C1-835644BCDD68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{906171D0-2025-4DC1-B2C1-835644BCDD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{906171D0-2025-4DC1-B2C1-835644BCDD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{906171D0-2025-4DC1-B2C1-835644BCDD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F00544-3E10-4F14-AAF4-A83EA8297FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F00544-3E10-4F14-AAF4-A83EA8297FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F00544-3E10-4F14-AAF4-A83EA8297FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F00544-3E10-4F14-AAF4-A83EA8297FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A8E457F4-02AD-4225-BBC4-F3AD859F710C}
+		SolutionGuid = {3AC4C154-27C6-44AF-91E7-3488ED63F460}
 	EndGlobalSection
 EndGlobal

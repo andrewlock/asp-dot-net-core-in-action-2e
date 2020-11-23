@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InjectingMultipleServices.Services
+namespace InjectingMultipleImplementations.Services
 {
     public class SmsSender : IMessageSender
     {

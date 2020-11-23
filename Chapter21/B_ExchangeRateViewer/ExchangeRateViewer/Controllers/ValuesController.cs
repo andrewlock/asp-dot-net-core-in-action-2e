@@ -26,6 +26,9 @@ namespace ExchangeRateViewer.Controllers
             _ratesClient = ratesClient;
         }
 
+        /// <summary>
+        /// Send requets using a singleton HttpClient instance
+        /// </summary>
         [HttpGet("httpclient")]
         public async Task<ActionResult<ExchangeRates>> HttpClientAsync()
         {
@@ -41,6 +44,9 @@ namespace ExchangeRateViewer.Controllers
             });
         }
 
+        /// <summary>
+        /// Send requets using IHttpClientFactory
+        /// </summary>
         [HttpGet("httpclientfactory")]
         public async Task<ActionResult<ExchangeRates>> HttpClientFactoryAsync()
         {
@@ -59,6 +65,9 @@ namespace ExchangeRateViewer.Controllers
             });
         }
 
+        /// <summary>
+        /// Send requets using named client
+        /// </summary>
         [HttpGet("namedclient")]
         public async Task<ActionResult<ExchangeRates>> NamedClientAsync()
         {
@@ -74,6 +83,9 @@ namespace ExchangeRateViewer.Controllers
             });
         }
 
+        /// <summary>
+        /// Send requets using typed client
+        /// </summary>
         [HttpGet("typedclient")]
         public async Task<ActionResult<ExchangeRates>> TypedClientAsync()
         {

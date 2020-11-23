@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using InjectingMultipleServices.Services;
+using InjectingMultipleImplementations.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace InjectingMultipleServices.Pages
+namespace InjectingMultipleImplementations.Pages
 {
     public class SingleMessageModel : PageModel
     {
@@ -17,7 +17,7 @@ namespace InjectingMultipleServices.Pages
             _messageSender = messageSender;
         }
 
-        public void OnGet(string username, IMessageSender _messageSender)
+        public void OnGet(string username)
         {
             _messageSender.SendMessage(username);
         }

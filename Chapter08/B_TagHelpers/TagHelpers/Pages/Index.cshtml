@@ -6,75 +6,77 @@
 
 <form method="post">
     <div class="form-check ">
-        <input class="form-check-input"  asp-for="Input.Boolean" />
+        <input class="form-check-input" asp-for="Input.Boolean" />
         <label class="form-check-label" asp-for="Input.Boolean"></label>
     </div>
     <div class="form-group ">
         <label asp-for="Input.Byte"></label>
-        <input class="form-control"  asp-for="Input.Byte" />
+        <input class="form-control" asp-for="Input.Byte" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.DateTime"></label>
-        <input class="form-control"  asp-for="Input.DateTime" />
+        <input class="form-control" asp-for="Input.DateTime" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Decimal"></label>
-        <input class="form-control"  asp-for="Input.Decimal" />
+        <input class="form-control" asp-for="Input.Decimal" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Decimal">Decimal with 0.000 format</label>
-        <input class="form-control"  asp-for="Input.Decimal" asp-format="{0:0.000}"/>
+        <input class="form-control" asp-for="Input.Decimal" asp-format="{0:0.000}" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Double"></label>
-        <input class="form-control"  asp-for="Input.Double" />
+        <input class="form-control" asp-for="Input.Double" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Email"></label>
-        <input class="form-control"  asp-for="Input.Email" />
+        <input class="form-control" asp-for="Input.Email" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Float"></label>
-        <input class="form-control"  asp-for="Input.Float" />
+        <input class="form-control" asp-for="Input.Float" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.HiddenInput"></label>
-        <input class="form-control"  asp-for="Input.HiddenInput" />
+        <input class="form-control" asp-for="Input.HiddenInput" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Int"></label>
-        <input class="form-control"  asp-for="Input.Int" />
+        <input class="form-control" asp-for="Input.Int" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.IntAsText"></label>
-        <input class="form-control"  asp-for="Input.IntAsText" />
+        <input class="form-control" asp-for="Input.IntAsText" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Password"></label>
-        <input class="form-control"  asp-for="Input.Password" />
+        <input class="form-control" asp-for="Input.Password" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Phone"></label>
-        <input class="form-control"  asp-for="Input.Phone" />
+        <input class="form-control" asp-for="Input.Phone" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.String"></label>
-        <input class="form-control"  asp-for="Input.String" />
+        <input class="form-control" asp-for="Input.String" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.StringAsDate"></label>
-        <input class="form-control"  asp-for="Input.StringAsDate" />
+        <input class="form-control" asp-for="Input.StringAsDate" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Url"></label>
-        <input class="form-control"  asp-for="Input.Url" />
+        <input class="form-control" asp-for="Input.Url" />
     </div>
     <div class="form-group ">
         <label asp-for="Input.Multiline"></label>
         <textarea asp-for="Input.Multiline"></textarea>
     </div>
-    <p>Submit the form to see the validation summay:</p>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <p>Submit the form to see the validation errors summary:</p>
 
     <div asp-validation-summary="All" class="text-danger"></div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>

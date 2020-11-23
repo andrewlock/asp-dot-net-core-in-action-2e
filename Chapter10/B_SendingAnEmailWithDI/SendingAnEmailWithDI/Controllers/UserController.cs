@@ -18,7 +18,7 @@ namespace SendingAnEmailWithoutDI.Controllers
             _emailSender = emailSender;
         }
 
-        [Route("register")]
+        [HttpPost("register")]
         public IActionResult RegisterUser(string username)
         {
             _emailSender.SendEmail(username);

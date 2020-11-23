@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeApplication", "RecipeApplication\RecipeApplication.csproj", "{710BEBFC-86EB-4CC0-8C65-B8419D6179A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeApplication", "RecipeApplication\RecipeApplication.csproj", "{10204B3E-BA12-4BC4-B2FB-CD402ADB61EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{710BEBFC-86EB-4CC0-8C65-B8419D6179A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{710BEBFC-86EB-4CC0-8C65-B8419D6179A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{710BEBFC-86EB-4CC0-8C65-B8419D6179A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{710BEBFC-86EB-4CC0-8C65-B8419D6179A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10204B3E-BA12-4BC4-B2FB-CD402ADB61EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10204B3E-BA12-4BC4-B2FB-CD402ADB61EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10204B3E-BA12-4BC4-B2FB-CD402ADB61EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10204B3E-BA12-4BC4-B2FB-CD402ADB61EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EAC3E9A1-270B-4DBB-B695-AAD46C77D2BA}
+		SolutionGuid = {E6ACD112-3BD1-4EE2-BA1A-C2DF030FE0A6}
 	EndGlobalSection
 EndGlobal

@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BankingApplication.Pages
 {
-    // Comment this to protect again CSRF attacks
-    //[IgnoreAntiforgeryToken]
+    // Remove the attribute below to protect again CSRF attacks
+    [IgnoreAntiforgeryToken]
     [Authorize]
     public class BalanceModel : PageModel
     {

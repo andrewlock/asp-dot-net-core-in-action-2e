@@ -8,7 +8,7 @@
         @foreach (var value in new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 })
         {
         <li>
-            <a asp-page="CalculateSquare" asp-route-value="@value">Calculate the square of @value</a>
+            <a asp-page="CalculateSquare" asp-route-number="@value">Calculate the square of @value</a>
         </li>
         }
     </ul>

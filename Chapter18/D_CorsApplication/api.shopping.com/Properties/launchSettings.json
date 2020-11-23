@@ -3,6 +3,7 @@
   "profiles": {
     "api.shopping.com": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": false,
       "applicationUrl": "https://localhost:5111",
       "environmentVariables": {

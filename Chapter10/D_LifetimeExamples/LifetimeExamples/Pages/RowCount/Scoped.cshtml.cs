@@ -11,6 +11,7 @@ namespace LifetimeExamples.Pages
 {
     public class ScopedModel : PageModel
     {
+        private readonly static List<RowCountViewModel.Count> _previousCounts = new(); // c#9 feature - target typing
         public RowCountViewModel RowCounts { get; set; }
 
         private readonly ScopedRepository _scopedRepo;
@@ -27,10 +28,16 @@ namespace LifetimeExamples.Pages
 
         public void OnGet()
         {
+            var count = new RowCountViewModel.Count
+            {
+                DataContext = _scopedDataContext.RowCount,
+                Repository = _scopedRepo.RowCount,
+            };
+            _previousCounts.Insert(0, count);
             RowCounts = new RowCountViewModel
             {
-                DataContextCount = _scopedDataContext.RowCount,
-                RepositoryCount = _scopedRepo.RowCount,
+                Current = count,
+                Previous = _previousCounts,
             };
         }
     }

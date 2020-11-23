@@ -1,12 +1,13 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace DesigningForAutomaticBinding
 {
@@ -24,6 +25,13 @@ namespace DesigningForAutomaticBinding
         {
             services.AddRazorPages();
             services.Configure<TestOptions>(Configuration.GetSection("TestOptions"));
+
+            // manually bind and register the settings
+            // Allows you to inject TestOptions directly into services, 
+            // instead of using IOptions<TestOptions>
+            var settings = new TestOptions();
+            Configuration.GetSection("TestOptions").Bind(settings);
+            services.AddSingleton(settings);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

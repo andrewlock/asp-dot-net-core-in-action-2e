@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingAStaticFileWebsite", "CreatingAStaticFileWebsite\CreatingAStaticFileWebsite.csproj", "{7C6E0F1C-008A-4A02-BFE6-C88FF1B06ED5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingAStaticFileWebsite", "CreatingAStaticFileWebsite\CreatingAStaticFileWebsite.csproj", "{F0ACA0D7-5F60-426D-AA8D-304B03C27A01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C6E0F1C-008A-4A02-BFE6-C88FF1B06ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C6E0F1C-008A-4A02-BFE6-C88FF1B06ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C6E0F1C-008A-4A02-BFE6-C88FF1B06ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C6E0F1C-008A-4A02-BFE6-C88FF1B06ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0ACA0D7-5F60-426D-AA8D-304B03C27A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0ACA0D7-5F60-426D-AA8D-304B03C27A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0ACA0D7-5F60-426D-AA8D-304B03C27A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0ACA0D7-5F60-426D-AA8D-304B03C27A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7119993E-E726-47CF-A7C5-EC2EEF01AC98}
+		SolutionGuid = {60719F04-5EB4-4F32-AF7A-FCD988D40A89}
 	EndGlobalSection
 EndGlobal

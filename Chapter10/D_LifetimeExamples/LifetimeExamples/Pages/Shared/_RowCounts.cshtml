@@ -1,9 +1,40 @@
 ﻿@model RowCountViewModel
 
 <h4>Random row count values</h4>
-<dl class="dl-horizontal">
-    <dt>The <code>DatabaseContext.RowCount</code> is</dt>
-    <dd>@Model.DataContextCount.ToString("###,###,###")</dd>
-    <dt>The <code>Repository.RowCount</code> is</dt>
-    <dd>@Model.RepositoryCount.ToString("###,###,###")</dd>
+
+<dl class="row">
+    <div class="col">
+        <dt>The <em>Current</em> <code>DatabaseContext.RowCount</code> is</dt>
+        <dd>@Model.Current.DataContext.ToString("###,###,###")</dd>
+    </div>
+    <div class="col">
+        <dt>The <em>Current</em> <code>Repository.RowCount</code> is</dt>
+        <dd>@Model.Current.Repository.ToString("###,###,###")</dd>
+    </div>
 </dl>
+
+<h4>Previous values:</h4>
+@if (Model.Previous?.Count > 1)
+{
+    @*Not ideal as itterates list twice, could be refactored*@
+    <dl class="row">
+        <div class="col">
+            <dt>The <em>Previous</em> <code>DatabaseContext.RowCount</code>s are</dt>
+            @foreach (var counts in Model.Previous.Skip(1))
+            {
+                <dd class="col">@counts.DataContext.ToString("###,###,###")</dd>
+            }
+        </div>
+        <div class="col">
+            <dt>The <em>Previous</em> <code>Repository.RowCount</code>s are</dt>
+            @foreach (var counts in Model.Previous.Skip(1))
+            {
+                <dd class="col">@counts.Repository.ToString("###,###,###")</dd>
+            }
+        </div>
+    </dl>
+}
+else
+{
+    <p><em>Hit refresh to generate new random values. Previous values will be listed here</em></p>
+}

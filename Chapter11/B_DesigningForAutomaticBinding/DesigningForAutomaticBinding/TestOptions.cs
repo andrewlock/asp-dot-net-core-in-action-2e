@@ -12,6 +12,7 @@ namespace DesigningForAutomaticBinding
         public Dictionary<string, SubClass> Dictionary { get; set; }
         public List<SubClass> List { get; set; }
         public IDictionary<string, SubClass> IDictionary { get; set; }
+        public Dictionary<int, SubClass> DictionaryWithNonStringKeys { get; set; }
         public IEnumerable<SubClass> IEnumerable { get; set; }
         public ICollection<SubClass> ReadOnlyCollection { get; } = new List<SubClass>();
 

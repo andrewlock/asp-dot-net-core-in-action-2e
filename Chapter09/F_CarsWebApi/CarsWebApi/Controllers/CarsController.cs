@@ -19,9 +19,9 @@ namespace CarsWebApi.Controllers
 
         string _carsAsXml = "<cars><car>Nissan Micra</car><car>FordFocus</car></cars>";
 
-        [Route("start")]
-        [Route("ignition")]
-        [Route("/start-car")]
+        [HttpGet("start")]
+        [HttpGet("ignition")]
+        [HttpGet("/start-car")]
         public IEnumerable<string> ListCars()
         {
             return new string[]
