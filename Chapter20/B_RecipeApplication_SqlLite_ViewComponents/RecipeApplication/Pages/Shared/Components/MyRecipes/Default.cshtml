@@ -10,6 +10,6 @@
 <div class="list-group list-group-flush">
     @foreach (var recipe in Model)
     {
-        <a asp-page="Recipes/View" asp-route-id="@recipe.Id" class="list-group-item list-group-item-action">@recipe.Name</a>
+        <a asp-page="/Recipes/View" asp-route-id="@recipe.Id" class="list-group-item list-group-item-action">@recipe.Name</a>
     }
 </div>
