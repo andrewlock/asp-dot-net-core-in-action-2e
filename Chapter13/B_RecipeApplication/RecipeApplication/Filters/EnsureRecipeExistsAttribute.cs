@@ -24,6 +24,10 @@ namespace RecipeApplication
                 {
                     context.Result = new NotFoundResult();
                 }
+                else
+                {
+                    await next();
+                }
             }
         }
     }
